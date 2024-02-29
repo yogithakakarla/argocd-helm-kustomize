@@ -1,0 +1,7 @@
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: 1.19.7
+containerPort: 80
+servicePort: 80   
