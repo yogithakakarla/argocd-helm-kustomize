@@ -1,0 +1,25 @@
+resources
+- ./frontend
+- ./backend
+- ./overlays/dev
+
+
+
+# Use the Helm chart values to generate the Kubernetes manifest files
+helm:
+- name: frontend
+  path: ./frontend
+- name: backend
+  path: ./backend
+
+patches:
+- path: overlays/dev
+  target:
+    kind: Deployment
+    labelSelector:
+      app: frontend
+- path: overlays/dev
+  target:
+    kind: Deployment
+    labelSelector:
+      app: backend
