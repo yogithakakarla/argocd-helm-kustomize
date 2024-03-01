@@ -10,7 +10,7 @@ patches:
   target:
     kind: Deployment
     name: backend
-- path: example/overlays/dev/frontend
+- path: example/overlays/dev/frontend/patch.yaml
   target:
     kind: Deployment
     name: frontend
