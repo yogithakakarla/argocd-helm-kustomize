@@ -4,3 +4,16 @@ resources:
 
 nameSuffix: -dev1
 namespace: dev1
+
+helmGlobals:
+  chartHome: ./charts
+patches:
+- path: example/overlays/dev/backend/patch.yaml
+  target:
+    kind: Deployment
+    name: backend
+- path: example/overlays/dev/frontend
+  target:
+    kind: Deployment
+    name: frontend
+
