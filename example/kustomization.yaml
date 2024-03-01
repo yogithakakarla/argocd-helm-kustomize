@@ -1,5 +1,7 @@
 resources:
-- ./overlays/dev
+- ./frontend
+- ./backend
+
 
 helmGlobals:
   chartHome: ./charts
