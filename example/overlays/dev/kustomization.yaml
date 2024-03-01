@@ -6,11 +6,11 @@ namespace: dev1
 helmGlobals:
   chartHome: ./charts
 patches:
-- path: example/overlays/dev/backend/patch.yaml
+- path: ./backend/patch.yaml
   target:
     kind: Deployment
     name: backend
-- path: example/overlays/dev/frontend/patch.yaml
+- path: ./frontend/patch.yaml
   target:
     kind: Deployment
     name: frontend
