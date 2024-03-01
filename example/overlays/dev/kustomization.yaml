@@ -1,8 +1,9 @@
----
-resources:
+
 
 nameSuffix: -dev1
 namespace: dev1
+
+resources:
 
 helmGlobals:
   chartHome: ./charts
