@@ -2,7 +2,7 @@ resources:
 - ./overlays/dev
 
 helmGlobals:
-  chartHome: charts
+  chartHome: ./charts
 patches:
 - path: overlays/dev
   target:
