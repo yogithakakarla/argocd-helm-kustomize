@@ -1,6 +1,0 @@
----
-resources:
-- ../../base
-
-nameSuffix: -dev1
-namespace: dev1
