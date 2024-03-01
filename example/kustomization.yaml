@@ -1,25 +1,25 @@
-resources
-- ./frontend
-- ./backend
-- ./overlays/dev
+resources:
+  - ./frontend
+  - ./backend
+  - ./overlays/dev
 
-
-
-# Use the Helm chart values to generate the Kubernetes manifest files
+# Define Helm charts and their paths
 helm:
-- name: frontend
-  path: ./frontend
-- name: backend
-  path: ./backend
+  - name: frontend
+    chartPath: ./frontend
+  - name: backend
+    chartPath: ./backend
 
+# Apply patches to the generated Kubernetes manifests
 patches:
-- path: overlays/dev
-  target:
-    kind: Deployment
-    labelSelector:
-      app: frontend
-- path: overlays/dev
-  target:
-    kind: Deployment
-    labelSelector:
-      app: backend
+  - path: overlays/dev
+    target:
+      kind: Deployment
+      labelSelector:
+        app: frontend
+
+  - path: overlays/dev
+    target:
+      kind: Deployment
+      labelSelector:
+        app: backend
