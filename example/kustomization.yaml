@@ -1,14 +1,8 @@
 resources:
-- ./frontend
-- ./backend
 - ./overlays/dev
 
-helm:
-- name: frontend
-  chart: ./frontend
-- name: backend
-  chart: ./backend
-
+helmGlobals:
+  chartHome: charts
 patches:
 - path: overlays/dev
   target:
