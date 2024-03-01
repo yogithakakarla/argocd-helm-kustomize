@@ -4,13 +4,11 @@ resources:
 helmGlobals:
   chartHome: ./charts
 patches:
-- path: overlays/dev
+- path: example/overlays/dev/backend/patch.yaml
   target:
     kind: Deployment
-    labelSelector:
-      app: frontend
-- path: overlays/dev
+    name: backend
+- path: example/overlays/dev/frontend
   target:
     kind: Deployment
-    labelSelector:
-      app: backend
+    name: frontend
