@@ -5,9 +5,9 @@ resources:
 
 helmCharts:
 - name: frontend
-  path: ./frontend
+  chart: ./frontend
 - name: backend
-  path: ./backend
+  chart: ./backend
 
 patches:
 - path: overlays/dev
