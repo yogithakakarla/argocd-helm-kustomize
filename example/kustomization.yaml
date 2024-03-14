@@ -1,5 +1,0 @@
-resources:
-- ./charts/frontend
-- ./charts/backend
-
-
